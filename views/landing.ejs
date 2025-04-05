@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educational Platform</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/stylesheets/landing.css">
+    <link rel="stylesheet" href="/stylesheets/navbar.css">
+    <link rel="stylesheet" href="/stylesheets/scrollbar.css">
+    <link rel="stylesheet" href="/stylesheets/testimonials.css">
+    <link rel="stylesheet" href="/stylesheets/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+</head>
+<body>
+
+    <%- include('partials/navbar') %>
+    <!-- Hero Section -->
+    <div id="hero">
+        <div id="hero-img"></div>
+        <div id="hero-overlay"></div>
+        <div id="hero-content">
+            <h1>Empower Your Learning</h1>
+            <p>Unlock knowledge with our innovative platform.</p>
+            <a href="#about" class="btn btn-custom">Get Started</a>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <!-- <section id="about" class="text-center">
+        <h2>Why Choose Us?</h2>
+        <p>We provide high-quality courses to help you achieve your goals.</p>
+    </section> -->
+
+    <section id="why-choose-us" class="py-5">
+        <div class="container">
+            <h2 class="text-center section-title">Why Choose Us?</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card custom-card">
+                        <div class="icon-container">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Expert Instructors</h5>
+                            <p class="card-text">Learn from top educators with years of experience in the industry.</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-md-4">
+                    <div class="card custom-card">
+                        <div class="icon-container">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Hands-on Learning</h5>
+                            <p class="card-text">Gain practical experience through real-world projects and coding challenges.</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-md-4">
+                    <div class="card custom-card">
+                        <div class="icon-container">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Industry Recognition</h5>
+                            <p class="card-text">Get certified and enhance your career prospects with industry-recognized credentials.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div id="features"> 
+        <h1> Features </h1>
+    </div>
+    
+    <section class="features-section">
+      
+        <div class="features-container">
+            
+            <!-- Blockchain-Based Certifications -->
+            <div class="feature-card">
+                <i class="fas fa-lock"></i>
+                <h3>Blockchain Certifications</h3>
+                <p>Secure, verifiable, and tamper-proof digital certificates powered by blockchain technology.</p>
+            </div>
+    
+            <!-- Gamified Learning with Leaderboards -->
+            <div class="feature-card">
+                <i class="fas fa-trophy"></i>
+                <h3>Gamified Learning</h3>
+                <p>Engage with interactive lessons, earn points, and climb leaderboards to stay motivated.</p>
+            </div>
+    
+            <!-- AI Chatbot -->
+            <div class="feature-card">
+                <i class="fas fa-robot"></i>
+                <h3>AI Chatbot Assistance</h3>
+                <p>Get instant support and personalized learning recommendations with our AI-powered chatbot.</p>
+            </div>
+        </div>
+    </section>
+       
+    <hr>
+        <!-- testimonial section starts from here   , some scripts at the end related to testimonial sections animmations-->
+    <section class="testimonial-section" data-aos="fade-up">
+        <div class="container">
+            <h2 class="testimonial-heading">What Our Users Say</h2>
+            
+            <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    
+
+                    <hr>
+                    <!-- Testimonial 1 -->
+                    <div class="carousel-item active">
+                        <div class="testimonial-card text-center">
+                            <img src="https://randomuser.me/api/portraits/women/1.jpg" alt="User 1">
+                            <p class="testimonial-text">
+                                "This platform has completely transformed my learning experience! The blockchain certifications add so much credibility."
+                            </p>
+                            <p class="star-rating">⭐⭐⭐⭐⭐</p>
+                            <p class="testimonial-name">- Sarah Williams</p>
+                        </div>
+                    </div>
+    
+                    <!-- Testimonial 2 -->
+                    <div class="carousel-item">
+                        <div class="testimonial-card text-center">
+                            <img src="https://randomuser.me/api/portraits/men/2.jpg" alt="User 2">
+                            <p class="testimonial-text">
+                                "Gamified learning made studying fun! I love competing on the leaderboards with my friends."
+                            </p>
+                            <p class="star-rating">⭐⭐⭐⭐</p>
+                            <p class="testimonial-name">- James Carter</p>
+                        </div>
+                    </div>
+    
+                    <!-- Testimonial 3 -->
+                    <div class="carousel-item">
+                        <div class="testimonial-card text-center">
+                            <img src="https://randomuser.me/api/portraits/women/3.jpg" alt="User 3">
+                            <p class="testimonial-text">
+                                "The AI chatbot is a game-changer! It answers my questions instantly, saving me so much time."
+                            </p>
+                            <p class="star-rating">⭐⭐⭐⭐⭐</p>
+                            <p class="testimonial-name">- Emily Johnson</p>
+                        </div>
+                    </div>
+    
+                    <!-- Testimonial 4 -->
+                    <div class="carousel-item">
+                        <div class="testimonial-card text-center">
+                            <img src="https://randomuser.me/api/portraits/men/4.jpg" alt="User 4">
+                            <p class="testimonial-text">
+                                "A truly innovative platform! The certifications are well-structured and highly valuable."
+                            </p>
+                            <p class="star-rating">⭐⭐⭐⭐</p>
+                            <p class="testimonial-name">- Alex Parker</p>
+                        </div>
+                    </div>
+    
+                    <!-- Testimonial 5 -->
+                    <div class="carousel-item">
+                        <div class="testimonial-card text-center">
+                            <img src="https://randomuser.me/api/portraits/women/5.jpg" alt="User 5">
+                            <p class="testimonial-text">
+                                "I've improved my skills tremendously thanks to the interactive lessons and quizzes!"
+                            </p>
+                            <p class="star-rating">⭐⭐⭐⭐⭐</p>
+                            <p class="testimonial-name">- Olivia Taylor</p>
+                        </div>
+                    </div>
+    
+                </div>
+    
+                <!-- Carousel Indicators -->
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="2"></button>
+                    <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="3"></button>
+                    <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="4"></button>
+                </div>
+    
+                <!-- Navigation Arrows -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+    
+            </div>
+        </div>
+    </section>
+    <!-- Include Footer -->
+    <%- include('partials/footer') %>
+
+    
+    
+
+    <!-- bootstrap script cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Animation JS -->
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+     <!-- navbar script for dynamic active marking and other tasks -->
+    <script src="/frontendScripts/navbar.js"></script>
+
+  
+
+<script>
+    AOS.init();
+</script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+:root {
+    --background-color: #f7f7f7; /* You can adjust this */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--background-color);
+}
+
+.testimonial-section {
+    background:linear-gradient(to bottom, white,black);
+    padding: 60px 0;
+    text-align: center;
+}
+
+.testimonial-heading {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: #771965;
+    margin-bottom: 20px;
+}
+
+.testimonial-card {
+    background: #771965 url('https://images.unsplash.com/photo-1561835503-648c2f1169d2?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    color: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: auto;
+}
+
+.testimonial-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #f292c2;
+}
+
+.testimonial-text {
+    font-size: 1.2rem;
+    margin: 20px 0;
+}
+
+.testimonial-name {
+    font-weight: bold;
+    margin-top: 10px;
+    color: #f57ca9;
+}
+
+/* Star Ratings */
+.star-rating {
+    color: #FFD700;
+    font-size: 1.2rem;
+}
+
+/* Center carousel indicators */
+.carousel-indicators {
+    bottom: -40px;
+}
+
+.carousel-indicators button {
+    background-color: #f292c2;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+/* Custom Navigation Arrows */
+.carousel-control-prev, .carousel-control-next {
+    filter: invert(100%);
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    .testimonial-card {
+        padding: 20px;
+    }
+    .testimonial-text {
+        font-size: 1rem;
+    }
+    .testimonial-card img {
+        width: 60px;
+        height: 60px;
+    }
+    .star-rating {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .testimonial-text {
+        font-size: 0.9rem;
+    }
+    .star-rating {
+        font-size: 0.9rem;
+    }
+}

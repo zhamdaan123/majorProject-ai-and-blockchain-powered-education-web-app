@@ -1,0 +1,20 @@
+/* public/stylesheets/variables.css */
+:root {
+    --primary-color: #771965;  /*Deep Purple */
+    --secondary-color: #c13399; /*Rich Pink*/ 
+    --accent-color: #f292c2;  /*Soft Pink */
+    --highlight-color: #f57ca9; /*Light Pink */
+    
+    --background-color: #f9f1f6; /*Off-White */
+    --text-color: #2c2c2c; /*Dark Gray */
+
+    /* Font sizes */
+    --font-base: 16px;
+    --font-large: 24px;
+    --font-small: 14px;
+
+    /* Spacing */
+    --spacing-small: 8px;
+    --spacing-medium: 16px;
+    --spacing-large: 24px;
+}

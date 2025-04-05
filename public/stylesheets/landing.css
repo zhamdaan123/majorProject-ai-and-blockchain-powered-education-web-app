@@ -1,0 +1,220 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9f1f6; /* Background Color */
+    color: #771965; /* Primary Text Color */
+    margin: 0;
+    padding: 0;
+}
+
+/* Hero Section */
+#hero {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#hero-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('https://images.unsplash.com/photo-1561835503-648c2f1169d2?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed; /* Parallax Effect */
+    z-index: 1;
+}
+
+#hero-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent, #771965); /* Overlay */
+    z-index: 2;
+}
+
+#hero-content {
+    position: relative;
+    z-index: 3;
+    color: #fff;
+}
+
+.btn-custom {
+    background: #f292c2;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.btn-custom:hover {
+    background: #c13399;
+}
+
+/* Define Color Variables */
+:root {
+    --primary-color: #771965;  /* Deep Purple */
+    --secondary-color: #c13399; /* Rich Pink */
+    --accent-color: #f292c2;  /* Soft Pink */
+    --highlight-color: #f57ca9; /* Light Pink */
+    
+    --background-color: #f9f1f6; /* Off-White */
+    --text-color: #2c2c2c; /* Dark Gray */
+}
+
+/* Section Styling */
+#why-choose-us {
+    background-color: var(--background-color);
+    padding: 60px 0;
+}
+
+/* Section Title */
+.section-title {
+    color: var(--primary-color);
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+/* Custom Card Styling */
+.custom-card {
+    background: white;
+    border-radius: 12px;
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border: none;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Card Hover Effect */
+.custom-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
+    background: var(--accent-color);
+    color: white;
+}
+
+/* Icon Styling */
+.icon-container {
+    font-size: 50px;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+    
+}
+
+
+
+/* Card Titles */
+.card-title {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+/* Card Text */
+.card-text {
+    color: var(--text-color);
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.custom-card {
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+#features { 
+   
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    width:100%;
+} 
+
+#features h1 { 
+    font-family: 'Raleway';
+    font-style:italic;
+    font-weight:500;
+    position :relative;
+    
+}
+ /* for line from left and right side of the h1 heading of features */
+
+#features h1::before,
+#features h1::after {
+            content: "";
+            position: absolute;
+            top: 50%; /* Align line to middle of text */
+            width: 100%; /* Extend to screen edges */
+            height: 2px;
+            background-color: var(--primary-color);
+        }
+
+        #features h1::before {
+            right: 100%; /* Extend left */
+        }
+
+        #features h1::after {
+            left: 100%; /* Extend right */
+        }
+
+     
+    /* features section */
+
+        .features-section {
+            text-align: center;
+            padding: 50px;
+            background-color: var(--background-color);
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 30px;
+        }
+        
+        .features-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .feature-card {
+            background: var(--primary-color);
+            color: white;
+            border-radius: 15px;
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        .feature-card:hover {
+            transform: scale(1.05);
+            background: var(--secondary-color);
+        }
+        
+        .feature-card i {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            color: var(--highlight-color);
+        }
+        

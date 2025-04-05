@@ -1,0 +1,105 @@
+@import url("variables.css");
+.navbar {
+    background-color: transparent !important;
+    position: absolute; /* Fix it on top */
+    width: 100%;
+    z-index: 1000; /* Ensure it's above other elements */
+ 
+}
+
+.navbar-brand, .nav-link {
+    color: white !important;
+    font-weight: bold;
+}
+/* Underline effect only for the individual anchor tags */
+.navbar-nav .nav-link {
+    position: relative;
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    font-size: 1.1rem;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Creating the underline effect */
+.navbar-nav .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px; /* Adjusts the position slightly below the text */
+    width: 0;
+    height: 2px;
+    background-color: #f292c2; /* Underline color */
+    transition: width 0.3s ease-in-out;
+}
+
+/* Expands underline smoothly from left to right */
+.navbar-nav .nav-link:hover::after {
+    width: 100%;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #f292c2 !important;
+}
+
+
+/* Active Page Styling */
+.navbar-nav a.active {
+    
+    color:var(--highlight-color) !important;
+    font-weight: bold;
+}
+
+/* Always keep the underline for active page */
+.navbar-nav a.active::after {
+    width: 100%;
+    position : absolute ;
+    top:20%;
+    
+    
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 10px;
+    margin-left: 20px;
+}
+
+/* Buttons */
+.btn {
+    text-decoration: none;
+    padding: 5px 16px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.login-btn {
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+    border-radius:30px !important;
+    font-weight:500;
+ 
+}
+
+.signup-btn {
+    background: #f292c2;
+    color: white;
+    border: 1px solid #f292c2;
+    border-radius:30px !important;
+    font-weight:500;
+  
+}
+
+/* Hover effects */
+.login-btn:hover {
+    background: white;
+    color: #771965;
+}
+
+.signup-btn:hover {
+    background: white;
+    color: #771965;
+}
