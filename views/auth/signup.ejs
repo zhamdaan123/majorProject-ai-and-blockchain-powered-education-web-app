@@ -22,10 +22,10 @@
     <h1 class="text-center" data-text="Sign Up">Sign Up</h1>
     <p class="text-center">Create an account to get started!</p>
     </div>
-    <form method="post">
+    <form method="post" action="/api/auth/register">
       <!-- Full Name -->
       <div class="input-group">
-        <input type="text" id="fullname" name="fullname" placeholder=" " required>
+        <input type="text" id="fullname" name="username" placeholder=" " required>
         <label for="fullname">Full Name</label>
       </div>
 
@@ -42,10 +42,10 @@
       </div>
 
       <!-- Confirm Password -->
-      <div class="input-group">
+      <!-- <div class="input-group">
         <input type="password" id="confirm-password" name="confirm-password" placeholder=" " required>
         <label for="confirm-password">Confirm Password</label>
-      </div>
+      </div> -->
 
       <!-- Remember Me -->
       <!-- <div class="checkbox-container">

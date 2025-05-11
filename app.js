@@ -3,15 +3,37 @@ const express = require('express');
 const path = require('path');
 const mongoose = require('mongoose');
 const cors = require('cors');
+const courseRoutes = require('./routes/courses');
+const dashboardRoutes = require('./routes/dashboard');
+const cookieParser = require('cookie-parser');
+
+const verifyToken = require('./middleware/authMiddleware.js');
+
+
 require('dotenv').config(); // Loads environment variables from a .env file
 
+
+
 const app = express();
+const authRoutes = require('./routes/auth');
+const protectedRoutes = require('./routes/protected');
+
+
 
 // Middleware
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")));
+
+app.use(cookieParser()); // Add this line
+
+app.use('/api/auth', authRoutes);
+app.use('/api', protectedRoutes);
+app.use('/api/courses', courseRoutes);
+app.use('/', dashboardRoutes);
+app.use('/courses', courseRoutes);
+
 // Set the view engine to EJS
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views')); // Specify the 'views' folder
@@ -34,6 +56,9 @@ app.get('/signup', (req, res) => {
 });
 app.get('/login', (req, res) => {
   res.render('auth/login');
+});
+app.get('/coursePage', verifyToken,async(req, res) => {
+  res.render('coursePage');
 });
 
 
